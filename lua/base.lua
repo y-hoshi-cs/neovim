@@ -41,4 +41,6 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 vim.opt.formatoptions:append { 'r' }
 
-
+-- NerdTree auto emit
+vim.cmd "autocmd TabNew * call timer_start(0, { -> execute('NerdTree') })"
+vim.cmd "autocmd VimEnter * execute 'NERDTree'"

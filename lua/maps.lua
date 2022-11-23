@@ -32,3 +32,8 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w><')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+-- EasyAlign (TODO: errors)
+-- xmap ga <Plug>(EasyAlign)
+-- nmap ga <Plug>(EasyAlign)
+-- keymap.set('n', 'ga', vim.cmd [[Easy Align]])
