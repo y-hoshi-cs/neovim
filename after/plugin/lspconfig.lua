@@ -9,6 +9,13 @@ local protocol = require('vim.lsp.protocol')
 local on_attach = function(client, buff)
   vim.api.nvim_buf_set_option(buff, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+  if client.server_capabilities.documentFormattingProvider then
+    vim.api.nvim_command [[augroup Format]]
+    vim.api.nvim_command [[autocmd! * <buffer>]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    vim.api.nvim_command [[augroup END]]
+  end
+
   local bufopts = {
     noremap = true,
     silent = true,
@@ -35,31 +42,61 @@ local lsp_flags = {
 	debounce_text_changes = 150
 }
 
--- TODO: エラーが発生するのとコンプリーション効かない
--- local cmp = require('cmp')
+nvim_lsp.tsserver.setup {
+  on_attach = on_attach,
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  cmd = { "typescript-language-server", "--stdio" },
+}
 
--- cmp.setup({
---   snippet = {
---     expand = function(args)
---       vim.fn["vsnip#anonymous"](args.body)
---     end,
---   },
---   window = { },
---   mapping = cmp.mapping.preset.insert({
---     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
---     ['<C-f>'] = cmp.mapping.scroll_docs(4),
---     ['<C-Space>'] = cmp.mapping.complete(),
---     ['<C-e>'] = cmp.mapping.abort(),
---     ['<CR>'] = cmp.mapping.confirm({
---       select = true
---     }),
---     sources = cmp.config.sources({
---       { name = 'nvim_lsp' },
---       { name = 'vsnip' },
---       { name = 'buffer' },
---     })
---   })
--- })
+-- nvim_lsp.sumneko_lua.setup {
+--   on_attach = on_attach,
+--   settings = {
+--     Lua = {
+--       diagnostics = {
+--         globals = { 'vim' }
+--       },
+--       workspace = {
+--         library = vim.api.nvim_get_runtime_file("", true)
+--       }
+--     }
+--   }
+-- }
+
+local cmp = require('cmp')
+local lspkind = require('lspkind')
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      -- vim.fn["vsnip#anonymous"](args.body)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true
+    }),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'vsnip' },
+    { name = 'buffer' },
+  }),
+  formatting = {
+    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+  }
+})
+
+vim.cmd[[
+  set completeopt=menuone,noinsert,noselect
+  highlight! default link CmpItemKind CompItemMenuDefault
+]]
+
 
 nvim_lsp.rust_analyzer.setup {
   on_attach = on_attach,

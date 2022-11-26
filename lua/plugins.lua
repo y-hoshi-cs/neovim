@@ -18,6 +18,8 @@ packer.startup(function(use)
 
   -- Lspconfig
   use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
+  use 'L3MON4D3/LuaSnip'
 
   -- Completions
 	use 'hrsh7th/cmp-nvim-lsp'
@@ -30,12 +32,19 @@ packer.startup(function(use)
 
   -- AutoPairs
   use 'windwp/nvim-autopairs'
+  -- use 'windwp/nvim-ts-autotag'
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
 
-  -- Testing
+  -- Git
+  use 'lewis6991/gitsigns.nvim'
+
+  -- Flutter
+  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+
+  -- Testing now...
 	use 'tpope/vim-commentary' -- Comment
 	use 'tpope/vim-surround' -- Surround
 	use 'tpope/vim-repeat' -- Repeat Commands
