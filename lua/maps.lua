@@ -3,19 +3,20 @@ local keymap = vim.keymap
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
 
-keymap.set('n', '+', '<C-a>')
-keymap.set('n', '-', '<C-x>')
+-- keymap.set('n', '+', '<C-a>')
+-- keymap.set('n', '-', '<C-x>')
 
-keymap.set('n', 'bw', 'vb"_d')
-
--- Delete a word  backwards
-keymap.set('n', '<C-a>', 'gg<S-v>G')
+-- -- Delete a word  backwards
+-- keymap.set('n', 'bw', 'vb"_d')
+-- keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- New Tab
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
+
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
+
 -- Move Window
 keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', 's<left>', '<C-w>h')
@@ -33,7 +34,18 @@ keymap.set('n', '<C-w><right>', '<C-w><')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
+-- Definition for Coc
+-- keymap.set('n', 'gv', ":call CocAction('jumpDefinition', 'vsplit')", { silent = true })
+-- keymap.set('n', 'gs', ":call CocAction('jumpDefinition', 'split')", { silent = true })
+keymap.set('n', 'gv', ":vs<CR><Plug>(coc-type-definition)", { silent = true })
+keymap.set('n', 'gs', ":sp<CR><Plug>(coc-type-definition)", { silent = true })
+keymap.set('n', 'gi', "<Plug>(coc-implementation)", { silent = true })
+keymap.set('n', 'gf', "<Plug>(coc-references)", { silent = true })
+-- ref: https://github.com/neoclide/coc.nvim/issues/869 
+keymap.set('n', 'gk', ":call CocAction('doHover')<Return>", { silent = true })
 -- EasyAlign (TODO: errors)
 -- xmap ga <Plug>(EasyAlign)
 -- nmap ga <Plug>(EasyAlign)
 -- keymap.set('n', 'ga', vim.cmd [[Easy Align]])
+keymap.set('x', 'ga', "<Plug>(EasyAlign)", { silent = true })
+keymap.set('n', 'ga', "<Plug>(EasyAlign)", { silent = true })

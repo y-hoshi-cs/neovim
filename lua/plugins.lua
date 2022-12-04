@@ -21,6 +21,9 @@ packer.startup(function(use)
   use 'glepnir/lspsaga.nvim'
   use 'L3MON4D3/LuaSnip'
 
+  -- Coc.nvim
+  use { 'neoclide/coc.nvim', branch = 'release' }
+
   -- Completions
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
@@ -37,12 +40,14 @@ packer.startup(function(use)
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'BurntSushi/ripgrep'
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
 
   -- Flutter
   use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+  use 'Neevash/awesome-flutter-snippets'
 
   -- Testing now...
 	use 'tpope/vim-commentary' -- Comment
@@ -51,6 +56,12 @@ packer.startup(function(use)
 	use 'simeji/winresizer' -- Resizer (is it needed?)
 	use 'junegunn/vim-easy-align' -- Alignment
 	use 'scrooloose/nerdtree' -- File Browser (consider using `neo-tree`)
+
+  -- Tree-sitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
 
   -- TODO:
   -- TreeSitter

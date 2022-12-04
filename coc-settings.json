@@ -1,0 +1,25 @@
+{
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.noselect": false,
+  "suggest.minTriggerInputLength": 2,
+  "suggest.acceptSuggestionOnCommitCharacger": true,
+  "suggest.snippetIndicator": ">",
+  "suggest.enablePreview": true,
+  "coc.preferences.hoverTarget": "float",
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFileTypes": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+    "rust"
+  ],
+  "tsserver.formatOnType": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+}

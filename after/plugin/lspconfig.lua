@@ -42,11 +42,12 @@ local lsp_flags = {
 	debounce_text_changes = 150
 }
 
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" },
-}
+-- nvim_lsp.tsserver.setup {
+--   cmd = { "typescript-language-server", "--stdio" },
+--   on_attach = on_attach,
+--   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+--   -- cmd = { "tsserver", "--stdio" },
+-- }
 
 -- nvim_lsp.sumneko_lua.setup {
 --   on_attach = on_attach,
@@ -98,11 +99,11 @@ vim.cmd[[
 ]]
 
 
-nvim_lsp.rust_analyzer.setup {
-  on_attach = on_attach,
-  flags = lsp_flags,
-  settings = {
-    ['rust-analyzer'] = {}
-  }
-}
+-- nvim_lsp.rust_analyzer.setup {
+--   on_attach = on_attach,
+--   flags = lsp_flags,
+--   settings = {
+--     ['rust-analyzer'] = {}
+--   }
+-- }
 

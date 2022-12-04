@@ -51,7 +51,10 @@ vim.keymap.set('n', ';f',
     })
   end)
 vim.keymap.set('n', ';r', function()
-  builtin.live_grep()
+  builtin.live_grep({
+    no_ignore = false,
+    hidden = true
+  })
 end)
 vim.keymap.set('n', '\\\\', function()  
   builtin.buffers()
