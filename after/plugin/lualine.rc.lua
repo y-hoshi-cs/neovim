@@ -7,7 +7,8 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'solarized_dark',
+    -- theme = 'solarized_dark',
+    theme = 'everblush',
     section_separators = {
       left = '',
       right = ''

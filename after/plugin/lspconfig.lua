@@ -90,6 +90,10 @@ cmp.setup({
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   }
 })
 

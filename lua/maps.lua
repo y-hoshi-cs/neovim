@@ -28,6 +28,9 @@ keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
 keymap.set('', 'sl', '<C-w>l')
 
+-- Toggle to default-mode in terminal-mode
+-- keymap.set('', '<Esc>', '<C-\><C-n>')
+
 -- Resize window
 keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w><')
@@ -43,9 +46,7 @@ keymap.set('n', 'gi', "<Plug>(coc-implementation)", { silent = true })
 keymap.set('n', 'gf', "<Plug>(coc-references)", { silent = true })
 -- ref: https://github.com/neoclide/coc.nvim/issues/869 
 keymap.set('n', 'gk', ":call CocAction('doHover')<Return>", { silent = true })
+
 -- EasyAlign (TODO: errors)
--- xmap ga <Plug>(EasyAlign)
--- nmap ga <Plug>(EasyAlign)
--- keymap.set('n', 'ga', vim.cmd [[Easy Align]])
 keymap.set('x', 'ga', "<Plug>(EasyAlign)", { silent = true })
 keymap.set('n', 'ga', "<Plug>(EasyAlign)", { silent = true })

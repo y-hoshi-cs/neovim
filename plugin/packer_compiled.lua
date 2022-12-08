@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["awesome-flutter-snippets"] = {
+    loaded = true,
+    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\awesome-flutter-snippets",
+    url = "https://github.com/Neevash/awesome-flutter-snippets"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -104,10 +109,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
+  },
+  everblush = {
+    loaded = true,
+    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\everblush",
+    url = "https://github.com/Everblush/everblush.nvim"
   },
   ["flutter-tools.nvim"] = {
     loaded = true,
@@ -134,11 +149,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
-  ["neosolarized.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neosolarized.nvim",
-    url = "https://github.com/svrana/neosolarized.nvim"
-  },
   nerdtree = {
     loaded = true,
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nerdtree",
@@ -159,6 +169,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
@@ -168,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ripgrep = {
+    loaded = true,
+    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ripgrep",
+    url = "https://github.com/BurntSushi/ripgrep"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,

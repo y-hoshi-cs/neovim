@@ -8,8 +8,9 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
+    -- 'svrana/neosolarized.nvim',
+    'Everblush/everblush.nvim', as = 'everblush',
+    -- requires = { 'tjdevries/colorbuddy.nvim' }
   } 
   use 'hoob3rt/lualine.nvim' -- StatusLine
   use 'nvim-lua/plenary.nvim' -- 

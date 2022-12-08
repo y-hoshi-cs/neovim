@@ -12,7 +12,8 @@
     "typescriptreact",
     "javascript",
     "javascriptreact",
-    "rust"
+    "rust",
+    "ruby"
   ],
   "tsserver.formatOnType": true,
   "eslint.autoFixOnSave": true,
