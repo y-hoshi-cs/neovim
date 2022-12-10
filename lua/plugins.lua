@@ -45,6 +45,11 @@ packer.startup(function(use)
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
+  use 'airblade/vim-gitgutter'
+  use 'akinsho/git-conflict.nvim'
+  use 'sindrets/diffview.nvim'
+  use 'TimUntersberger/neogit'
+  use 'tpope/vim-fugitive'
 
   -- Flutter
   use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
@@ -57,6 +62,10 @@ packer.startup(function(use)
 	use 'simeji/winresizer' -- Resizer (is it needed?)
 	use 'junegunn/vim-easy-align' -- Alignment
 	use 'scrooloose/nerdtree' -- File Browser (consider using `neo-tree`)
+  use {
+    'folke/todo-comments.nvim',
+    requires = "nvim-lua/plenary.nvim", 
+  }
 
   -- Tree-sitter
   use {

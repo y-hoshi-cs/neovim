@@ -114,10 +114,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
-  ["colorbuddy.nvim"] = {
+  ["diffview.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorbuddy.nvim",
-    url = "https://github.com/tjdevries/colorbuddy.nvim"
+    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
   },
   everblush = {
     loaded = true,
@@ -128,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\flutter-tools.nvim",
     url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
+  ["git-conflict.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\git-conflict.nvim",
+    url = "https://github.com/akinsho/git-conflict.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -213,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-easy-align",
     url = "https://github.com/junegunn/vim-easy-align"
+  },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "C:\\Users\\yhosh\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
   },
   ["vim-repeat"] = {
     loaded = true,
