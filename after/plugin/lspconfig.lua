@@ -42,27 +42,6 @@ local lsp_flags = {
 	debounce_text_changes = 150
 }
 
--- nvim_lsp.tsserver.setup {
---   cmd = { "typescript-language-server", "--stdio" },
---   on_attach = on_attach,
---   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
---   -- cmd = { "tsserver", "--stdio" },
--- }
-
--- nvim_lsp.sumneko_lua.setup {
---   on_attach = on_attach,
---   settings = {
---     Lua = {
---       diagnostics = {
---         globals = { 'vim' }
---       },
---       workspace = {
---         library = vim.api.nvim_get_runtime_file("", true)
---       }
---     }
---   }
--- }
-
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
@@ -74,13 +53,13 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-d>']     = cmp.mapping.scroll_docs(-4),
+    ['<C-f>']     = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true
+    ['<C-e>']     = cmp.mapping.abort(),
+    ['<CR>']      = cmp.mapping.confirm({
+      behavior    = cmp.ConfirmBehavior.Replace,
+      select      = true
     }),
   }),
   sources = cmp.config.sources({
@@ -92,7 +71,7 @@ cmp.setup({
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
   },
   window = {
-    completion = cmp.config.window.bordered(),
+    completion    = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   }
 })
@@ -101,13 +80,3 @@ vim.cmd[[
   set completeopt=menuone,noinsert,noselect
   highlight! default link CmpItemKind CompItemMenuDefault
 ]]
-
-
--- nvim_lsp.rust_analyzer.setup {
---   on_attach = on_attach,
---   flags = lsp_flags,
---   settings = {
---     ['rust-analyzer'] = {}
---   }
--- }
-

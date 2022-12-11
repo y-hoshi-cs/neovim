@@ -43,6 +43,9 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 vim.opt.formatoptions:append { 'r' }
 
+-- https://qiita.com/t--shin/items/4a88df44beb9450bdbc1
+vim.cmd "set signcolumn=yes"
+
 -- NerdTree auto emit
 vim.cmd "autocmd TabNew * call timer_start(0, { -> execute('NerdTree') })"
 vim.cmd "autocmd VimEnter * execute 'NERDTree'"

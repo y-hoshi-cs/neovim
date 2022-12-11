@@ -6,7 +6,8 @@
   "suggest.snippetIndicator": ">",
   "suggest.enablePreview": true,
   "coc.preferences.hoverTarget": "float",
-  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnType": false,
+  "coc.preferences.formatOnSave": true,
   "coc.preferences.formatOnSaveFileTypes": [
     "typescript",
     "typescriptreact",
@@ -23,4 +24,8 @@
     "typescript",
     "typescriptreact"
   ],
+  "coc.config.float": {
+    "border": true,
+    "rounded": true
+  }
 }

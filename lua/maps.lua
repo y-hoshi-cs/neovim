@@ -57,10 +57,13 @@ keymap.set('n', 'ga', "<Plug>(EasyAlign)", { silent = true })
 
 -- GitGutter
 --https://qiita.com/youichiro/items/b4748b3e96106d25c5bc
-keymap.set('n', 'g[', ":call GitGutterPrevHunk<CR>")
-keymap.set('n', 'g]', ":call GitGutterNextHunk<CR>")
-keymap.set('n', 'gh', ":call GitGutterLineHighlightsToggle<CR>")
-keymap.set('n', 'gp', ":call GitGutterPreviewHunk<CR>")
+-- https://github.com/airblade/vim-gitgutter/blob/master/plugin/gitgutter.vim
+keymap.set('n', '[h', "<Plug>(GitGutterPrevHunk)")
+keymap.set('n', ']h', "<Plug>(GitGutterNextHunk)")
+keymap.set('n', '>>', "<Plug>(GitGutterStageHunk)")
+keymap.set('n', '<<', "<Plug>(GitGutterUndounk)")
+keymap.set('n', 'th', "<Plug>(GitGutterLineHighlightsToggle)")
+keymap.set('n', 'ph', "<Plug>(GutGutterPreviewHunk)")
 
 -- GitConflict
 keymap.set('n', 'co', "<Plug>(git-conflict-ours)")

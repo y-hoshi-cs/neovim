@@ -66,6 +66,7 @@ packer.startup(function(use)
     'folke/todo-comments.nvim',
     requires = "nvim-lua/plenary.nvim", 
   }
+  use 'tpope/vim-endwise'
 
   -- Tree-sitter
   use {
