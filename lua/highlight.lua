@@ -7,6 +7,6 @@ vim.opt.pumblend = 5
 vim.opt.background = 'dark'
 
 -- TODO: Not work?
-vim.cmd([[highlight GitGutterAdd    ctermfg=blue]])
-vim.cmd([[highlight GitGutterChange ctermfg=yellow]])
-vim.cmd([[highlight GitGutterDelete ctermfg=red]])
+vim.cmd([[highlight GitGutterAdd    guifg=#009900 ctermfg=2]])
+vim.cmd([[highlight GitGutterChange guifg=#bbbb00 ctermfg=3]])
+vim.cmd([[highlight GitGutterDelete guifg=#ff2222 ctermfg=1]])

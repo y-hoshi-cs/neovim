@@ -14,7 +14,10 @@ ts.setup {
     disable = {},
   },
   ensure_installed = {
+    "typescript",
+    "javascript",
     "tsx",
+    "vue",
     "toml",
     "php",
     "json",

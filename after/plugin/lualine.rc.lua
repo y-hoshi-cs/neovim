@@ -4,11 +4,11 @@ if (not status) then
   return
 end
 
+-- NOTE: ref> https://github.com/nvim-lualine/lualine.nvim
 lualine.setup {
   options = {
     icons_enabled = true,
-    -- theme = 'solarized_dark',
-    theme = 'everblush',
+    theme = "gruvbox",
     section_separators = {
       left = '',
       right = ''
@@ -57,6 +57,6 @@ lualine.setup {
       lualine_z = { }
     },
     tabline = {},
-    extensions = { 'fugitive' },
+    extensions = { 'fugitive', 'nerdtree' },
   }
 }

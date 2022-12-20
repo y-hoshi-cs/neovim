@@ -7,23 +7,32 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    -- 'svrana/neosolarized.nvim',
-    'Everblush/everblush.nvim', as = 'everblush',
-    -- requires = { 'tjdevries/colorbuddy.nvim' }
-  } 
+
+  -- Themes
+  -- use {
+  --   'svrana/neosolarized.nvim',
+  --   -- 'Everblush/everblush.nvim', as = 'everblush',
+  --   requires = { 'tjdevries/colorbuddy.nvim' }
+  -- } 
+  -- use 'Mofiqul/vscode.nvim'
+  use { "ellisonleao/gruvbox.nvim" }
+
   use 'hoob3rt/lualine.nvim' -- StatusLine
   use 'nvim-lua/plenary.nvim' -- 
   use 'onsails/lspkind-nvim' -- VsCode like pictograms
 	use 'ryanoasis/vim-devicons'
 
   -- Lspconfig
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
   use 'L3MON4D3/LuaSnip'
+  -- use 'mhartington/formatter.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Coc.nvim
-  use { 'neoclide/coc.nvim', branch = 'release' }
+  -- use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- Completions
 	use 'hrsh7th/cmp-nvim-lsp'
@@ -51,9 +60,9 @@ packer.startup(function(use)
   use 'TimUntersberger/neogit'
   use 'tpope/vim-fugitive'
 
-  -- Flutter
-  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
-  use 'Neevash/awesome-flutter-snippets'
+  -- NOTE: Flutter(currently not used in development)
+  -- use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+  -- use 'Neevash/awesome-flutter-snippets'
 
   -- Testing now...
 	use 'tpope/vim-commentary' -- Comment
@@ -75,15 +84,7 @@ packer.startup(function(use)
   }
 
   -- TODO:
-  -- TreeSitter
-  -- EasyAlign
-  -- VimSurround
-  -- VimCommentary
   -- Vim-repeat
   -- NerdTree
-  -- Typescript
-  -- Flutter
   -- Markdown/OpenBrowser
-  -- GitGutter/Fugitive
-  -- GitDiff
 end)

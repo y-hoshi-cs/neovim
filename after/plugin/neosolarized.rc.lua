@@ -1,3 +1,4 @@
+-- WARN: currently not used
 local status, neo = pcall(require, "neosolarized")
 if (not status) then 
   print("NeoSolarized Not Found")

@@ -48,7 +48,6 @@ local lspkind = require('lspkind')
 cmp.setup({
   snippet = {
     expand = function(args)
-      -- vim.fn["vsnip#anonymous"](args.body)
       require('luasnip').lsp_expand(args.body)
     end,
   },
@@ -76,7 +75,56 @@ cmp.setup({
   }
 })
 
+-- NOTE: setting for not to select automatically from candidates
 vim.cmd[[
   set completeopt=menuone,noinsert,noselect
   highlight! default link CmpItemKind CompItemMenuDefault
 ]]
+
+require('mason').setup()
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    'sumneko_lua',
+    'tsserver',
+    'eslint',
+    'html',
+    'cssls',
+    'rust_analyzer',
+    'intelephense',
+  },
+})
+local lspconfig = require('lspconfig')
+require('mason-lspconfig').setup_handlers {
+  function(server_name)
+    lspconfig[server_name].setup {
+      capabilities = capabilities,
+    }
+  end,
+}
+
+local null_ls = require('null-ls')
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
+local completion = null_ls.builtins.completion
+
+null_ls.setup({
+  sources = {
+    formatting.stylua,
+    formatting.prettier.with({extra_args = {}}),
+    formatting.black.with({ extra_args = { '--fast' }}),
+    diagnostics.eslint,
+    completion.spell,
+  }
+})
+
+-- require('formatter').setup {
+--   logging = true,
+--   log_level = vim.log.levels.WARN,
+--   filetype = {
+--     lua = {
+--       require('formatter.filetypes.lua').stylua,
+--       function()
+--       end
+--     }
+--   }
+-- }

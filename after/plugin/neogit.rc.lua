@@ -1,3 +1,4 @@
+-- WARN: currently not used
 local status, ng = pcall(require, 'neogit')
 if (not status) then
   print("neogit load failed")

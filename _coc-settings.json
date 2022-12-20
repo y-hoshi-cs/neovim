@@ -22,7 +22,8 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "vue"
   ],
   "coc.config.float": {
     "border": true,
