@@ -32,10 +32,10 @@ local on_attach = function(client, buff)
 		print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 	end, bufopts)
 	vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-	vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
+	vim.keymap.set('n', '<space>rn', vim.lsp.bufbugfix/KRA_validations.rename, bufopts)
 	vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-	vim.keymap.set('n', '<space>f', function() vim.lsp.buf.formatting { async = true  } end, bufopts)
+	vim.keymap.set('n', '<C-f>', vim.lsp.buf.format, bufopts)
 end
 
 local lsp_flags = {
@@ -52,8 +52,8 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-d>']     = cmp.mapping.scroll_docs(-4),
-    ['<C-f>']     = cmp.mapping.scroll_docs(4),
+    -- ['<C-d>']     = cmp.mapping.scroll_docs(-4),
+    -- ['<C-f>']     = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>']     = cmp.mapping.abort(),
     ['<CR>']      = cmp.mapping.confirm({
