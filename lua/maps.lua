@@ -1,17 +1,7 @@
 local keymap = vim.keymap
 
--- Do not yank with x
-keymap.set('n', 'x', '"_x')
-
--- keymap.set('n', '+', '<C-a>')
--- keymap.set('n', '-', '<C-x>')
-
--- -- Delete a word  backwards
--- keymap.set('n', 'bw', 'vb"_d')
--- keymap.set('n', '<C-a>', 'gg<S-v>G')
-
 -- New Tab
-keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
+-- keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
@@ -64,12 +54,12 @@ keymap.set('n', ']h', "<Plug>(GitGutterNextHunk)")
 keymap.set('n', '>>', "<Plug>(GitGutterStageHunk)")
 keymap.set('n', '<<', "<Plug>(GitGutterUndounk)")
 keymap.set('n', 'th', "<Plug>(GitGutterLineHighlightsToggle)")
-keymap.set('n', 'ph', "<Plug>(GutGutterPreviewHunk)")
+-- keymap.set('n', 'ph', "<Plug>(GutGutterPreviewHunk)")
 
 -- GitConflict
 keymap.set('n', 'co', "<Plug>(git-conflict-ours)")
 keymap.set('n', 'ct', "<Plug>(git-conflict-theirs)")
 keymap.set('n', 'cb', "<Plug>(git-conflict-both)")
 keymap.set('n', 'c0', "<Plug>(git-conflict-none)")
-keymap.set('n', ']x', "<Plug>(git-conflict-prev-conflict)")
-keymap.set('n', '[x', "<Plug>(git-conflict-next-conflict)")
+keymap.set('n', '[x', "<Plug>(git-conflict-prev-conflict)")
+keymap.set('n', ']x', "<Plug>(git-conflict-next-conflict)")
